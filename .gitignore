@@ -1,0 +1,6 @@
+# Project exclude paths
+/tour_ssm_dao/target/
+/tour_ssm_domain/target/
+/tour_ssm_service/target/
+/tour_ssm_utils/target/
+/tour_ssm_web/target/
