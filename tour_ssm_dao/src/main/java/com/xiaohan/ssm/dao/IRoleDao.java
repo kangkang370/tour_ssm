@@ -56,5 +56,5 @@ public interface IRoleDao {
     void addPermissionToRole(@Param("roleId") String roleId, @Param("permissionId") String permissionId) throws Exception;
 
     @Select("select * from permission where id not in(select permissionId from role_permission where roleId = #{roleId})")
-    List<Permission> findRoleByIdAndAllPermission(String roleId) throws Exception;
+    List<Permission> findOtherPermissions(String roleId) throws Exception;
 }

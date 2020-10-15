@@ -56,6 +56,6 @@ public class RoleServiceImpl implements IRoleService {
 
     @Override
     public List<Permission> findOtherPermissions(String roleId) throws Exception {
-        return roleDao.findRoleByIdAndAllPermission(roleId);
+        return roleDao.findOtherPermissions(roleId);
     }
 }

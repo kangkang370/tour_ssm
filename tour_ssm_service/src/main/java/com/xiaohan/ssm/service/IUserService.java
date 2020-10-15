@@ -1,5 +1,6 @@
 package com.xiaohan.ssm.service;
 
+import com.xiaohan.ssm.domain.Role;
 import com.xiaohan.ssm.domain.UserInfo;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
@@ -16,4 +17,8 @@ public interface IUserService extends UserDetailsService {
     void save(UserInfo userInfo) throws Exception;
 
     UserInfo findById(String id) throws Exception;
+
+    List<Role> findOtherRoles(String userId) throws Exception;
+
+    void addRoleToUser(String userId, String[] roleIds) throws Exception;
 }

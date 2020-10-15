@@ -55,9 +55,9 @@ public class RoleController {
         return "redirect:findAll.do";
     }
 
+    // 根据roleId查询role，并查询可以添加的权限
     @RequestMapping("/findRoleByIdAndAllPermission")
     public ModelAndView findRoleByIdAndAllPermission(@RequestParam(name = "id",required = true)String roleId) throws Exception{
-        System.out.println("----------------");
         ModelAndView mv = new ModelAndView();
         // 根据roleId查询角色
         Role role = roleService.findById(roleId);
@@ -70,7 +70,7 @@ public class RoleController {
     }
 
     @RequestMapping("/addPermissionToRole.do")
-    public String addPermissionToRole(@RequestParam(name = "roleId", required = true) String roleId, @RequestParam(name = "ids", required = true) String[] permissionIds ) throws Exception {
+    public String addPermissionToRole(@RequestParam(name = "roleId", required = true) String roleId, @RequestParam(name = "ids", required = true) String[] permissionIds) throws Exception {
         roleService.addPermissionToRole(roleId,permissionIds);
         return "redirect:findAll.do";
     }
