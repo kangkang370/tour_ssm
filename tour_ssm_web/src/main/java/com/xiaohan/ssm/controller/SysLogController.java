@@ -24,8 +24,8 @@ public class SysLogController {
     @RequestMapping("/findAll.do")
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
-        List<SysLog> logList = sysLogService.findAll();
-        mv.addObject("sysLogs",logList);
+        List<SysLog> sysLogs = sysLogService.findAll();
+        mv.addObject("sysLogs",sysLogs);
         mv.setViewName("sysLogList");
         return mv;
 
