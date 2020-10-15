@@ -36,7 +36,7 @@
 				<ul class="treeview-menu">
 
 					<li id="system-setting">
-						<security:authorize access="hasRole('ADMIN')">
+						<security:authorize access="hasRole('ADMIN')"/>
 						<a
 						href="${pageContext.request.contextPath}/user/findAll.do"> <i
 							class="fa fa-circle-o"></i> 用户管理
