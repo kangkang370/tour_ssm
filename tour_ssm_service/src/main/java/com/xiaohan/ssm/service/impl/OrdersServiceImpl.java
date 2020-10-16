@@ -34,4 +34,10 @@ public class OrdersServiceImpl implements IOrdersService {
     public Orders findById(String ordersId) throws Exception {
         return ordersDao.findById(ordersId);
     }
+
+    @Override
+    public void delete(String orderId) throws Exception {
+        ordersDao.deleteOrderTraveller(orderId);
+        ordersDao.delete(orderId);
+    }
 }

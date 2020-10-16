@@ -1,5 +1,6 @@
 package com.xiaohan.ssm.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.xiaohan.ssm.dao.IUserDao;
 import com.xiaohan.ssm.domain.Role;
 import com.xiaohan.ssm.domain.UserInfo;
@@ -58,7 +59,8 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public List<UserInfo> findAll() throws Exception {
+    public List<UserInfo> findAll(Integer page, Integer size) throws Exception {
+        PageHelper.startPage(page,size);
         return userDao.findAll();
     }
 

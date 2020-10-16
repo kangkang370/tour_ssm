@@ -17,7 +17,6 @@ import java.util.List;
 @Service
 @Transactional // 事物的注解一定不能忘了，添加的时候会用到
 public class ProductServiceImpl implements IProductService{
-
     @Autowired
     private IProductDao productDao;
 
@@ -29,5 +28,10 @@ public class ProductServiceImpl implements IProductService{
     @Override
     public void save(Product product) throws Exception {
         productDao.save(product);
+    }
+
+    @Override
+    public void delete(String productId) throws Exception{
+        productDao.delete(productId);
     }
 }

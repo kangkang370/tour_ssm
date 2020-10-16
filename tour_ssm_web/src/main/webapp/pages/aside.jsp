@@ -8,7 +8,7 @@
 		<!-- Sidebar user panel -->
 		<div class="user-panel">
 			<div class="pull-left image">
-				<img src="${pageContext.request.contextPath}/img/user2-160x160.jpg"
+				<img src="${pageContext.request.contextPath}/img/user9.jpg"
 					class="img-circle" alt="User Image">
 			</div>
 			<div class="pull-left info">
@@ -36,12 +36,12 @@
 				<ul class="treeview-menu">
 
 					<li id="system-setting">
-						<security:authorize access="hasRole('ADMIN')"/>
+						<%--<security:authorize access="hasRole('ADMIN')">--%>
 						<a
 						href="${pageContext.request.contextPath}/user/findAll.do"> <i
 							class="fa fa-circle-o"></i> 用户管理
 						</a>
-						</security:authorize>
+						<%--</security:authorize>--%>
 					</li>
 					<li id="system-setting"><a
 						href="${pageContext.request.contextPath}/role/findAll.do"> <i

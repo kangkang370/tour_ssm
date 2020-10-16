@@ -1,5 +1,6 @@
 package com.xiaohan.ssm.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.xiaohan.ssm.domain.Role;
 import com.xiaohan.ssm.domain.UserInfo;
 import com.xiaohan.ssm.service.IUserService;
@@ -25,7 +26,7 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    // 查询所有用户
+    /*// 查询所有用户--未分页
     @RequestMapping("/findAll.do")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ModelAndView findAll() throws Exception {
@@ -34,11 +35,22 @@ public class UserController {
         mv.addObject("userList", userInfos);
         mv.setViewName("user-list");
         return mv;
+    }*/
+
+    // 查询所有用户--分页显示
+    @RequestMapping("/findAll.do")
+    public ModelAndView findAll(@RequestParam(name = "page",required = true, defaultValue = "1")Integer page,@RequestParam(name = "size",required = true, defaultValue = "3") Integer size) throws Exception {
+        ModelAndView mv = new ModelAndView();
+        List<UserInfo> userInfos = userService.findAll(page,size);
+        PageInfo pageInfo = new PageInfo(userInfos);
+        mv.addObject("pageInfo", pageInfo);
+        mv.setViewName("userPageList");
+        return mv;
     }
 
     // 用户添加
     @RequestMapping("/save.do")
-    @PreAuthorize("authentication.principal.username == 'tom'")
+    /*@PreAuthorize("authentication.principal.username == 'tom'")*/
     public String save(UserInfo userInfo) throws Exception {
         userService.save(userInfo);
         return "redirect:findAll.do";

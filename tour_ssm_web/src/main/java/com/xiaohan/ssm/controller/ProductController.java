@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.ModelAndViewDefiningException;
 
@@ -27,10 +28,10 @@ public class ProductController {
     @Autowired
     private IProductService productService;
 
-    @InitBinder
+    /*@InitBinder
     public void initBinder(WebDataBinder binder){
         binder.registerCustomEditor(Date.class, new DateStringEditor());
-    }
+    }*/
 
     // 产品添加
     @RequestMapping("/save.do")
@@ -41,12 +42,20 @@ public class ProductController {
 
     // 查询全部产品
     @RequestMapping("/findAll.do")
-    @RolesAllowed("ADMIN")
+    /*@RolesAllowed("ADMIN")*/
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
         List<Product> ps = productService.findAll();
         mv.addObject("productList",ps);
         mv.setViewName("product-list1");
         return mv;
+    }
+
+    // 删除商品
+    @RequestMapping("/delete.do")
+    public String delete(@RequestParam(name = "id", required = true) String productId) throws Exception {
+        productService.delete(productId);
+        return "redirect:findAll.do";
+
     }
 }

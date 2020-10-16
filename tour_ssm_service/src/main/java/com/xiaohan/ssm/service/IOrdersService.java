@@ -14,4 +14,6 @@ public interface IOrdersService {
     List<Orders> findAll(int page, int size) throws Exception;
 
     public Orders findById(String ordersId) throws Exception;
+
+    void delete(String orderId) throws Exception;
 }

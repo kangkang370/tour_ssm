@@ -1,6 +1,7 @@
 package com.xiaohan.ssm.dao;
 
 import com.xiaohan.ssm.domain.Product;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
@@ -22,5 +23,8 @@ public interface IProductDao {
     public List<Product> findAll() throws Exception;
 
     @Insert("insert into product(productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus) values(#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
-    void save(Product product);
+    void save(Product product) throws Exception;
+
+    @Delete("delete from product where id = #{productId}")
+    void delete(String productId);
 }

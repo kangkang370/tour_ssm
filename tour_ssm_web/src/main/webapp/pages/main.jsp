@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +6,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>**小韩旅游网**</title>
+<title>小韩数据后台管理系统给</title>
 <meta name="description" content="AdminLTE2定制版">
 <meta name="keywords" content="AdminLTE2定制版">
 
@@ -141,20 +140,21 @@
 		<!-- 内容区域 -->
 		<div class="content-wrapper">
 
-			<img src="${pageContext.request.contextPath}/img/first.jpg"
-				width="100%" height="100%" />
+			<img src="${pageContext.request.contextPath}/img/first.jpg" width="100%" height="100%" />
+
 
 		</div>
 		<!-- 内容区域 /-->
 
 		<!-- 底部导航 -->
 		<footer class="main-footer">
-		<div class="pull-right hidden-xs">
-			<b>Version</b> 1.0.8
-		</div>
-		<strong>Copyright &copy; 2014-2017 <a
-			href="http://www.itcast.cn">研究院研发部</a>.
-		</strong> All rights reserved. </footer>
+			<div class="pull-right hidden-xs">
+				<b>Version</b> 5.2.5
+			</div>
+			<strong>Copyright &copy; 2020-2020 <a
+					href="https://github.com/kangkang370/tour_ssm">小韩学Java</a>.
+			</strong> All rights reserved.
+		</footer>
 		<!-- 底部导航 /-->
 
 	</div>

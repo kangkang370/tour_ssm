@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -8,57 +7,34 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>数据 - AdminLTE2定制版</title>
+<title>**小韩旅游网**</title>
 <meta name="description" content="AdminLTE2定制版">
 <meta name="keywords" content="AdminLTE2定制版">
 
 <!-- Tell the browser to be responsive to screen width -->
 <meta
-	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
-	name="viewport">
-
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionicons/css/ionicons.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/iCheck/square/blue.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/morris/morris.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/select2/select2.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/style.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/iCheck/square/blue.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/morris/morris.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/select2.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -79,15 +55,15 @@
 			<!-- 内容头部 -->
 			<section class="content-header">
 			<h1>
-				角色管理 <small>全部角色</small>
+				用户管理 <small>全部用户</small>
 			</h1>
 			<ol class="breadcrumb">
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
 				<li><a
-					href="${pageContext.request.contextPath}/role/findAll.do">角色管理</a></li>
+					href="${pageContext.request.contextPath}/user/findAll.do">用户管理</a></li>
 
-				<li class="active">全部角色</li>
+				<li class="active">全部用户</li>
 			</ol>
 			</section>
 			<!-- 内容头部 /-->
@@ -108,11 +84,11 @@
 							<div class="pull-left">
 								<div class="form-group form-inline">
 									<div class="btn-group">
-										<button type="button" class="btn btn-default" title="新建" onclick="location.href='${pageContext.request.contextPath}/pages/roleAdd.jsp'">
+										<button type="button" class="btn btn-default" title="新建" onclick="location.href='${pageContext.request.contextPath}/pages/userAdd.jsp'">
 											<i class="fa fa-file-o"></i> 新建
 										</button>
 										
-										<button type="button" class="btn btn-default" title="刷新">
+										<button type="button" class="btn btn-default" title="刷新" onclick="location.href='${pageContext.request.contextPath}/user/findAll.do'">
 											<i class="fa fa-refresh"></i> 刷新
 										</button>
 									</div>
@@ -136,23 +112,26 @@
 											id="selall" type="checkbox" class="icheckbox_square-blue">
 										</th>
 										<th class="sorting_asc">ID</th>
-										<th class="sorting_desc">角色名称</th>
-										<th class="sorting_asc sorting_asc_disabled">描述</th>										
+										<th class="sorting_desc">用户名</th>
+										<th class="sorting_asc sorting_asc_disabled">邮箱</th>
+										<th class="sorting_desc sorting_desc_disabled">联系电话</th>
+										<th class="sorting">状态</th>
 										<th class="text-center">操作</th>
 									</tr>
 								</thead>
 								<tbody>
 
-									<c:forEach items="${roleList}" var="role">
+									<c:forEach items="${pageInfo.list}" var="user">
 										<tr>
 											<td><input name="ids" type="checkbox"></td>
-											<td>${role.id }</td>
-											<td>${role.roleName }</td>
-											<td>${role.roleDesc }</td>																				
+											<td>${user.id }</td>
+											<td>${user.username }</td>
+											<td>${user.email }</td>
+											<td>${user.phoneNum }</td>
+											<td>${user.statusStr }</td>											
 											<td class="text-center">
-												<a href="${pageContext.request.contextPath}/role/findById.do?id=${role.id}" class="btn bg-olive btn-xs">详情</a>
-												<a href="${pageContext.request.contextPath}/role/deleteRole.do?id=${role.id}" class="btn bg-olive btn-xs">删除角色</a>
-												<a href="${pageContext.request.contextPath}/role/findRoleByIdAndAllPermission.do?id=${role.id}" class="btn bg-olive btn-xs">添加权限</a>
+												<a href="${pageContext.request.contextPath}/user/findById.do?id=${user.id}" class="btn bg-olive btn-xs">详情</a>
+												<a href="${pageContext.request.contextPath}/user/findUserByIdAndAllRole.do?id=${user.id}" class="btn bg-olive btn-xs">添加角色</a>
 											</td>
 										</tr>
 									</c:forEach>
@@ -180,27 +159,28 @@
 					<div class="box-footer">
 						<div class="pull-left">
 							<div class="form-group form-inline">
-								总共2 页，共14 条数据。 每页 <select class="form-control">
+								总共<a>${pageInfo.pages}</a>页，共<a>${pageInfo.total}</a>条数据。 每页
+								<select class="form-control" id="changePageSize" onchange="changePageSize()">
+									<option>请选择</option>
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>
 									<option>4</option>
 									<option>5</option>
+									<option><a>${pageInfo.total}</a></option>
 								</select> 条
 							</div>
 						</div>
 
 						<div class="box-tools pull-right">
 							<ul class="pagination">
-								<li><a href="#" aria-label="Previous">首页</a></li>
-								<li><a href="#">上一页</a></li>
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li><a href="#">下一页</a></li>
-								<li><a href="#" aria-label="Next">尾页</a></li>
+								<li><a href="${pageContext.request.contextPath}/user/findAll.do?page=1&size=${pageInfo.size}" aria-label="Previous">首页</a></li>
+								<li><a href="${pageContext.request.contextPath}/user/findAll.do?page=${pageInfo.pageNum-1}&size=${pageInfo.size}">上一页</a></li>
+								<c:forEach begin="1" end="${pageInfo.pages}" var="pageNum">
+									<li><a href="${pageContext.request.contextPath}/user/findAll.do?page=${pageNum}&size=${pageInfo.size}">${pageNum}</a></li>
+								</c:forEach>
+								<li><a href="${pageContext.request.contextPath}/user/findAll.do?page=${pageInfo.pageNum+1}&size=${pageInfo.size}">下一页</a></li>
+								<li><a href="${pageContext.request.contextPath}/user/findAll.do?page=${pageInfo.pages}&size=${pageInfo.size}" aria-label="Next">尾页</a></li>
 							</ul>
 						</div>
 
@@ -278,6 +258,14 @@
 		<script src="../plugins/ionslider/ion.rangeSlider.min.js"></script>
 		<script src="../plugins/bootstrap-slider/bootstrap-slider.js"></script>
 		<script>
+            function changePageSize() {
+                //获取下拉框的值
+                var pageSize = $("#changePageSize").val();
+
+                //向服务器发送请求，改变没页显示条数
+                location.href = "${pageContext.request.contextPath}/user/findAll.do?page=1&size="
+                    + pageSize;
+            }
 			$(document).ready(function() {
 				// 选择框
 				$(".select2").select2();

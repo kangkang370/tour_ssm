@@ -44,4 +44,10 @@ public interface IOrdersDao {
 
     })
     Orders findById(String ordersId) throws Exception;
+
+    @Delete("delete from orders where id = #{orderId}")
+    void delete(String orderId);
+
+    @Delete("delete from order_traveller where orderId = #{orderId}")
+    void deleteOrderTraveller(String orderId);
 }

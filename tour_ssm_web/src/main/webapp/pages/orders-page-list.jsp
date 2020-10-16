@@ -9,15 +9,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-
-
-
-<title>**小韩旅游网**</title>
+<title>小韩数据后台管理系统</title>
 <meta name="description" content="AdminLTE2定制版">
 <meta name="keywords" content="AdminLTE2定制版">
-
-
-
 
 <!-- Tell the browser to be responsive to screen width -->
 <meta
@@ -54,13 +48,6 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-
-
-
-
-
-
-
 
 <!-- jQuery 2.2.3 -->
 <!-- jQuery UI 1.11.4 -->
@@ -100,50 +87,28 @@
 <!-- bootstrap-datetimepicker -->
 <!-- 页面meta /-->
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionicons/css/ionicons.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/iCheck/square/blue.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/morris/morris.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/select2/select2.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/style.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/iCheck/square/blue.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/morris/morris.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datepicker/datepicker3.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/datatables/dataTables.bootstrap.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/treeTable/jquery.treetable.theme.default.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/select2/select2.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/colorpicker/bootstrap-colorpicker.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/adminLTE/css/skins/_all-skins.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -166,12 +131,13 @@
 			<!-- 内容头部 -->
 			<section class="content-header">
 				<h1>
-					数据管理 <small>数据列表</small>
+
+					订单管理 <small>订单列表</small>
 				</h1>
 				<ol class="breadcrumb">
-					<li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-					<li><a href="#">数据管理</a></li>
-					<li class="active">数据列表</li>
+					<li><a href="${pageContext.request.contextPath}/pages/main.jsp"><i class="fa fa-dashboard"></i> 首页</a></li>
+					<li><a href="${pageContext.request.contextPath}/orders/findAll.do">订单管理</a></li>
+					<li class="active">订单列表</li>
 				</ol>
 			</section>
 			<!-- 内容头部 /-->
@@ -194,20 +160,10 @@
 							<div class="pull-left">
 								<div class="form-group form-inline">
 									<div class="btn-group">
-										<button type="button" class="btn btn-default" title="新建"
-											onclick="location.href='${pageContext.request.contextPath}/pages/product-add.jsp'">
+										<%--<button type="button" class="btn btn-default" title="新建">
 											<i class="fa fa-file-o"></i> 新建
-										</button>
-										<button type="button" class="btn btn-default" title="删除">
-											<i class="fa fa-trash-o"></i> 删除
-										</button>
-										<button type="button" class="btn btn-default" title="开启">
-											<i class="fa fa-check"></i> 开启
-										</button>
-										<button type="button" class="btn btn-default" title="屏蔽">
-											<i class="fa fa-ban"></i> 屏蔽
-										</button>
-										<button type="button" class="btn btn-default" title="刷新">
+										</button>--%>
+										<button type="button" class="btn btn-default" title="刷新" onclick="location.href='${pageContext.request.contextPath}/orders/findAll.do'">
 											<i class="fa fa-refresh"></i> 刷新
 										</button>
 									</div>
@@ -253,9 +209,8 @@
 											<td>${orders.orderTimeStr }</td>
 											<td class="text-center">${orders.orderStatusStr }</td>
 											<td class="text-center">
-												<button type="button" class="btn bg-olive btn-xs">订单</button>
 												<button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/findById.do?id=${orders.id}'">详情</button>
-												<button type="button" class="btn bg-olive btn-xs">编辑</button>
+												<button type="button" class="btn bg-olive btn-xs" onclick="location.href='${pageContext.request.contextPath}/orders/deleteOrder.do?id=${orders.id}'">删除</button>
 											</td>
 										</tr>
 									</c:forEach>
@@ -273,37 +228,6 @@
 							</table>
 							<!--数据列表/-->
 
-							<!--工具栏-->
-							<div class="pull-left">
-								<div class="form-group form-inline">
-									<div class="btn-group">
-										<button type="button" class="btn btn-default" title="新建">
-											<i class="fa fa-file-o"></i> 新建
-										</button>
-										<button type="button" class="btn btn-default" title="删除">
-											<i class="fa fa-trash-o"></i> 删除
-										</button>
-										<button type="button" class="btn btn-default" title="开启">
-											<i class="fa fa-check"></i> 开启
-										</button>
-										<button type="button" class="btn btn-default" title="屏蔽">
-											<i class="fa fa-ban"></i> 屏蔽
-										</button>
-										<button type="button" class="btn btn-default" title="刷新">
-											<i class="fa fa-refresh"></i> 刷新
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="box-tools pull-right">
-								<div class="has-feedback">
-									<input type="text" class="form-control input-sm"
-										placeholder="搜索"> <span
-										class="glyphicon glyphicon-search form-control-feedback"></span>
-								</div>
-							</div>
-							<!--工具栏/-->
-
 						</div>
 						<!-- 数据表格 /-->
 
@@ -315,14 +239,15 @@
                 <div class="box-footer">
                     <div class="pull-left">
                         <div class="form-group form-inline">
-                            总共2 页，共14 条数据。 每页
+							总共<a>${pageInfo.pages}</a>页，共<a>${pageInfo.total}</a>条数据。 每页
                             <select class="form-control" id="changePageSize" onchange="changePageSize()">
-                                <option>点击选择</option>
+                                <option>请选择</option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5</option>
+								<option><a>${pageInfo.total}</a></option>
                             </select> 条
                         </div>
                     </div>
@@ -362,10 +287,10 @@
 		<!-- 底部导航 -->
 		<footer class="main-footer">
 			<div class="pull-right hidden-xs">
-				<b>Version</b> 1.0.8
+				<b>Version</b> 5.2.5
 			</div>
-			<strong>Copyright &copy; 2014-2017 <a
-				href="http://www.itcast.cn">研究院研发部</a>.
+			<strong>Copyright &copy; 2020-2020 <a
+				href="https://github.com/kangkang370/tour_ssm">小韩学Java</a>.
 			</strong> All rights reserved.
 		</footer>
 		<!-- 底部导航 /-->

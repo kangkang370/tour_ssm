@@ -3,6 +3,7 @@ package com.xiaohan.ssm.controller;
 import com.github.pagehelper.PageInfo;
 import com.xiaohan.ssm.domain.Orders;
 import com.xiaohan.ssm.service.IOrdersService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.naming.Name;
 import java.util.List;
 
 /**
@@ -55,6 +57,12 @@ public class OrdersController {
         mv.addObject("orders", orders);
         mv.setViewName("orders-show");
         return mv;
+    }
+
+    @RequestMapping("/deleteOrder.do")
+    public String  deleteOrder(@RequestParam(name = "id", required = true) String orderId) throws Exception {
+        ordersService.delete(orderId);
+        return "redirect:findAll.do";
     }
 
 }

@@ -112,7 +112,7 @@
 											<i class="fa fa-file-o"></i> 新建
 										</button>
 										
-										<button type="button" class="btn btn-default" title="刷新">
+										<button type="button" class="btn btn-default" title="刷新" onclick="location.href='${pageContext.request.contextPath}/user/findAll.do'">
 											<i class="fa fa-refresh"></i> 刷新
 										</button>
 									</div>
@@ -219,15 +219,16 @@
 			<!-- @@close -->
 			<!-- 内容区域 /-->
 
-			<!-- 底部导航 -->
-			<footer class="main-footer">
+		<!-- 底部导航 -->
+		<footer class="main-footer">
 			<div class="pull-right hidden-xs">
-				<b>Version</b> 1.0.8
+				<b>Version</b> 5.2.5
 			</div>
-			<strong>Copyright &copy; 2014-2017 <a
-				href="http://www.itcast.cn">研究院研发部</a>.
-			</strong> All rights reserved. </footer>
-			<!-- 底部导航 /-->
+			<strong>Copyright &copy; 2020-2020 <a
+					href="https://github.com/kangkang370/tour_ssm">小韩学Java</a>.
+			</strong> All rights reserved.
+		</footer>
+		<!-- 底部导航 /-->
 
 		</div>
 
