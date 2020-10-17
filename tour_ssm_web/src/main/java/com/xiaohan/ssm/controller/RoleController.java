@@ -5,6 +5,7 @@ import com.xiaohan.ssm.domain.Role;
 import com.xiaohan.ssm.service.IRoleService;
 import org.apache.ibatis.annotations.ResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -50,6 +51,7 @@ public class RoleController {
     }
 
     @RequestMapping("/deleteRole.do")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String deleteRole(@RequestParam(name = "id", required = true) String roleId) throws Exception{
         roleService.deleteRoleById(roleId);
         return "redirect:findAll.do";

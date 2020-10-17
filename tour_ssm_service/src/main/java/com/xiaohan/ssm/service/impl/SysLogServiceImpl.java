@@ -1,5 +1,6 @@
 package com.xiaohan.ssm.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.xiaohan.ssm.dao.ISysLogDao;
 import com.xiaohan.ssm.domain.SysLog;
 import com.xiaohan.ssm.service.IsysLogService;
@@ -26,7 +27,8 @@ public class SysLogServiceImpl implements IsysLogService {
     }
 
     @Override
-    public List<SysLog> findAll() throws Exception {
+    public List<SysLog> findAll(int page, int size) throws Exception {
+        PageHelper.startPage(page, size);
         return sysLogDao.findAll();
     }
 }

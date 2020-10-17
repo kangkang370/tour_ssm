@@ -5,6 +5,7 @@ import com.xiaohan.ssm.domain.Role;
 import com.xiaohan.ssm.domain.UserInfo;
 import com.xiaohan.ssm.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailMessage;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -85,5 +86,14 @@ public class UserController {
     public String addRoleToUser(@RequestParam(name = "userId",required = true) String userId, @RequestParam(name = "ids",required = true) String[] roleIds) throws Exception{
         userService.addRoleToUser(userId,roleIds);
         return "redirect:findAll.do";
+    }
+
+    // 删除用户
+    @RequestMapping("/deleteUser.do")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public String  delete(@RequestParam(name = "id", required = true) String id) throws Exception{
+        userService.delete(id);
+        return "redirect:findAll.do";
+
     }
 }

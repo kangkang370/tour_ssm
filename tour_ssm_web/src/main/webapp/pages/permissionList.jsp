@@ -112,7 +112,7 @@
 											<i class="fa fa-file-o"></i> 新建
 										</button>
 										
-										<button type="button" class="btn btn-default" title="刷新">
+										<button type="button" class="btn btn-default" title="刷新" onclick="location.href='${pageContext.request.contextPath}/permission/findAll.do'">
 											<i class="fa fa-refresh"></i> 刷新
 										</button>
 									</div>
@@ -179,11 +179,9 @@
 					<div class="box-footer">
 						<div class="pull-left">
 							<div class="form-group form-inline">
-								总共2 页，共14 条数据。 每页 条
+								总共<a>1</a>页，共<a>${permissionList.size()}</a>条数据。
 							</div>
 						</div>
-
-
 
 					</div>
 					<!-- /.box-footer-->

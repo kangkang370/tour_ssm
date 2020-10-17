@@ -87,4 +87,10 @@ public class UserServiceImpl implements IUserService {
             userDao.addRoleToUser(userId,roleId);
         }
     }
+
+    @Override
+    public void delete(String id) throws Exception {
+        userDao.deleteFromUsers_Role(id);
+        userDao.delete(id);
+    }
 }

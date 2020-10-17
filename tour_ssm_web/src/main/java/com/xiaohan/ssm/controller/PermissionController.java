@@ -3,6 +3,7 @@ package com.xiaohan.ssm.controller;
 import com.xiaohan.ssm.domain.Permission;
 import com.xiaohan.ssm.service.IPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -46,6 +47,7 @@ public class PermissionController {
     }
 
     @RequestMapping("/deletePermission.do")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String deletePermission(String id) throws Exception{
         permissionService.deleteById(id);
         return "redirect:findAll.do";

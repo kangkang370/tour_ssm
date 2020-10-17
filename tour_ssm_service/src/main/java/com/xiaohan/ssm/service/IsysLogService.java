@@ -13,5 +13,5 @@ public interface IsysLogService {
 
     public void save(SysLog sysLog) throws Exception;
 
-    public List<SysLog> findAll() throws Exception;
+    public List<SysLog> findAll(int page, int size) throws Exception;
 }
